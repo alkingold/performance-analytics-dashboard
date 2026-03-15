@@ -1,10 +1,14 @@
 # Performance Analytics Dashboard
 
-Performance analytics dashboard built with modern React tools to visualize entity metrics and historical performance data.
-
 ![Next.js](https://img.shields.io/badge/Next.js-React-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-blue)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-38B2AC)
+
+[![Live Demo](https://img.shields.io/badge/demo-live-green)](https://performance-analytics-dashboard.vercel.app)
+
+GitHub Repository: [https://github.com/alkingold/performance-analytics-dashboard](https://github.com/alkingold/performance-analytics-dashboard)
+
+Performance analytics dashboard built with modern React tools to visualize entity metrics and historical performance data.
 
 ## Stack
 
@@ -74,16 +78,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Landing Page:
 
-![Landing Page](screenshots/dashboard_landing.png)
+[![Landing Page](screenshots/dashboard_landing.png)](https://performance-analytics-dashboard.vercel.app/)
 
 Dashboard Three Graphs View:
 
-![Dashboard Three Graphs](screenshots/dashboard_3charts_tooltip.png)
+[![Dashboard Three Graphs](screenshots/dashboard_3charts_tooltip.png)](https://performance-analytics-dashboard.vercel.app/dashboard)
 
 Dashboard Dropdown View:
 
-![Dashboard Three Graphs](screenshots/dashboard_3charts_dropdown.png)
+[![Dashboard Three Graphs](screenshots/dashboard_3charts_dropdown.png)](https://performance-analytics-dashboard.vercel.app/dashboard)
 
 Dashboard One Graph View:
 
-![Dashboard Three Graphs](screenshots/dashboard_1chart_tooltip.png)
+[![Dashboard Three Graphs](screenshots/dashboard_1chart_tooltip.png)](https://performance-analytics-dashboard.vercel.app/dashboard)
