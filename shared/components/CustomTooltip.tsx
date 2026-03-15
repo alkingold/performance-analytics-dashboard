@@ -19,9 +19,25 @@ function CustomTooltip({
   active,
   payload,
   label,
-}: TooltipContentProps<string | number, string>) {
-  // }: TooltipContentProps<ValueType, NameType>) {
-  if (!active || !payload.length) return null;
+}: TooltipContentProps<ValueType, NameType>) {
+  if (!active || !payload || payload.length === 0) return null;
+
+  // Transform Recharts payload into TooltipPayload
+  const transformedPayload = payload.map((entry) => {
+    const dataKey = entry.dataKey as MetricKey;
+    const value = entry.value as number;
+    const color = entry.color || '#000';
+    const name = entry.name as string;
+    const metricPayload = entry.payload as MetricRow;
+
+    return {
+      value,
+      name,
+      color,
+      dataKey,
+      payload: metricPayload,
+    };
+  });
 
   const normalizedMetricValue = (entry: TooltipPayload): string => {
     const metricKey = entry.dataKey;
@@ -36,12 +52,10 @@ function CustomTooltip({
     }
   };
 
-  console.log('PAYLOAD', payload);
-
   return (
     <div className="rounded bg-white shadow p-2 opacity-90">
       <p>{label}:</p>
-      {payload.map((entry: TooltipPayload) => {
+      {transformedPayload.map((entry) => {
         return (
           <p key={entry.dataKey} style={{ color: entry.color }}>
             <span>{entry.name}</span>:{' '}

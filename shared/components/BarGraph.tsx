@@ -25,7 +25,7 @@ type BarGraphProps = {
 function BarGraph({ graphConfig, data }: BarGraphProps) {
   const lastEntry = [
     {
-      name: 'Metrics ',
+      name: 'Metrics',
       ...data[data.length - 1],
     },
   ];
